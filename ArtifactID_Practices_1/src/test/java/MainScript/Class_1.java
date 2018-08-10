@@ -14,6 +14,7 @@ import org.testng.annotations.AfterSuite;
 public class Class_1 {
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
+	  System.out.println("Hello");
   }
   @BeforeMethod
   public void beforeMethod() {

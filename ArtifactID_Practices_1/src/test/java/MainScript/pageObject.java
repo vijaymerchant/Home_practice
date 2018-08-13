@@ -127,7 +127,7 @@ public class pageObject {
 	
 	// Methods
 	
-	public void  AB_Testing_click 	(WebDriver driver) { this.driver=driver;	  System.out.println(driver);   AB_Testing.click(); 		}
+	public void  AB_Testing_click 	(WebDriver driver) { this.driver=driver;  	 System.out.println(driver);   AB_Testing.click(); 		}
 	  	
 	public void  BasicAuth_click 	() {		  BasicAuth.click(); 		}
   	  	

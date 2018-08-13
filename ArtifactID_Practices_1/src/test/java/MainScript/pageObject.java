@@ -1,11 +1,14 @@
 package MainScript;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class pageObject {
+	
+	WebDriver driver=null;
 
-	@FindBy(linkText = "A/B Testing")
+	@FindBy(xpath=".//*[@id='content']/ul/li[1]/a")				//(linkText = "A/B Testing")
 	WebElement AB_Testing;
 	
 	@FindBy(linkText = "Basic Auth")
@@ -124,7 +127,7 @@ public class pageObject {
 	
 	// Methods
 	
-	public void  AB_Testing_click 	() {	  AB_Testing.click(); 		}
+	public void  AB_Testing_click 	(WebDriver driver) { this.driver=driver;	  System.out.println(driver);   AB_Testing.click(); 		}
 	  	
 	public void  BasicAuth_click 	() {		  BasicAuth.click(); 		}
   	  	

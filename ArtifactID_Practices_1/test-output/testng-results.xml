@@ -1,85 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="130" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+  <suite name="Default suite" duration-ms="14567" started-at="2018-08-13T12:36:15Z" finished-at="2018-08-13T12:36:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="130" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
-      <class name="MainScript.Class_1">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:MainScript.Class_1@77f99a05]" name="beforeSuite" is-config="true" duration-ms="33" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:MainScript.Class_1@77f99a05]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+    <test name="Default test" duration-ms="14567" started-at="2018-08-13T12:36:15Z" finished-at="2018-08-13T12:36:29Z">
+      <class name="TestScript.Test_1">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestScript.Test_1@ed9d034]" name="beforeTest" is-config="true" duration-ms="16" started-at="2018-08-13T12:36:15Z" finished-at="2018-08-13T12:36:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:MainScript.Class_1@77f99a05]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestScript.Test_1@ed9d034]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-08-13T12:36:15Z" finished-at="2018-08-13T12:36:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:MainScript.Class_1@77f99a05]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestScript.Test_1@ed9d034]" name="beforeMethod" is-config="true" duration-ms="12239" started-at="2018-08-13T12:36:15Z" finished-at="2018-08-13T12:36:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:MainScript.Class_1@77f99a05]" name="f" duration-ms="11" started-at="2018-08-13T09:48:24Z" data-provider="dp" finished-at="2018-08-13T09:48:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="f()[pri:0, instance:TestScript.Test_1@ed9d034]" name="f" duration-ms="2015" started-at="2018-08-13T12:36:27Z" finished-at="2018-08-13T12:36:29Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at MainScript.pageObject.AB_Testing_click(pageObject.java:130)
+at TestScript.Test_ABTesting.Verify(Test_ABTesting.java:16)
+at TestScript.Test_1.f(Test_1.java:20)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:MainScript.Class_1@77f99a05]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:TestScript.Test_1@ed9d034]" name="afterMethod" is-config="true" duration-ms="281" started-at="2018-08-13T12:36:29Z" finished-at="2018-08-13T12:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:MainScript.Class_1@77f99a05]" name="beforeMethod" is-config="true" duration-ms="3" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.Integer, java.lang.String)[pri:0, instance:MainScript.Class_1@77f99a05]" name="f" duration-ms="2" started-at="2018-08-13T09:48:24Z" data-provider="dp" finished-at="2018-08-13T09:48:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:MainScript.Class_1@77f99a05]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:MainScript.Class_1@77f99a05]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestScript.Test_1@ed9d034]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-08-13T12:36:29Z" finished-at="2018-08-13T12:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:MainScript.Class_1@77f99a05]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-08-13T09:48:24Z" finished-at="2018-08-13T09:48:24Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestScript.Test_1@ed9d034]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-08-13T12:36:29Z" finished-at="2018-08-13T12:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:MainScript.Class_1@77f99a05]" name="afterSuite" is-config="true" duration-ms="1" started-at="2018-08-13T09:48:25Z" finished-at="2018-08-13T09:48:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- MainScript.Class_1 -->
+      </class> <!-- TestScript.Test_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

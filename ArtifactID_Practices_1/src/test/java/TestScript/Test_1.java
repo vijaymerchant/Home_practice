@@ -2,6 +2,7 @@ package TestScript;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -10,23 +11,39 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import MainScript.pageObject;
 
-public class Test_1{
-	static WebDriver driver = null;
+public class Test_1 {
 
-	@Test
-	public void f() throws InterruptedException {
-		Test_ABTesting a=new Test_ABTesting();
-		a.Verify(driver);
-		
+	public pageObject po;
+	WebDriver driver;
+
+	public Test_1() {
+
+		try {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		driver.get("http://the-internet.herokuapp.com/");
+
+		try {
+
+			po=PageFactory.initElements(driver, pageObject.class);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("In initilization");
 	}
 
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://the-internet.herokuapp.com/");
 		Thread.sleep(2000);
 	}
 

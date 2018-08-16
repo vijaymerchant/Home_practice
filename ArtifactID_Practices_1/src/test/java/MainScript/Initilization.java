@@ -1,4 +1,4 @@
-package TestScript;
+package MainScript;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,14 +11,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import MainScript.pageObject;
-
-public class Test_1 {
+public class Initilization {
 
 	public pageObject po;
-	WebDriver driver;
+	public WebDriver driver;
 
-	public Test_1() {
+	public Initilization() {
 
 		try {
 			System.setProperty("webdriver.chrome.driver",
@@ -49,7 +47,7 @@ public class Test_1 {
 
 	@AfterMethod
 	public void afterMethod() {
-		driver.close();
+		//driver.close();
 	}
 
 	@BeforeClass

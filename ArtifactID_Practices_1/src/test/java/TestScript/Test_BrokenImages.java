@@ -24,7 +24,7 @@ public class Test_BrokenImages extends Initilization {
             String linkURL=links.get(i).getAttribute("src");
             //System.out.println(links.get(i).getText());
             URL url=null;
-			try {
+			try { 
 				url = new URL(linkURL);
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
@@ -37,6 +37,7 @@ public class Test_BrokenImages extends Initilization {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			// https://stackoverflow.com/questions/43389340/how-to-find-broken-images-for-an-entire-web-site-in-selenium-webdriver-using-jav
             http.setRequestProperty("User-Agent","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
             http.setConnectTimeout(10000);
             http.setReadTimeout(20000);

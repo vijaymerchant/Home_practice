@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScript.Test_BrokenImages">
+      <class name="TestScript.Test_DisappearingElements">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="afterTest"/>
+          <include name="DisappearingElements"/>
           <include name="beforeMethod"/>
-          <include name="Broken_Images"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- TestScript.Test_BrokenImages -->
+      </class> <!-- TestScript.Test_DisappearingElements -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

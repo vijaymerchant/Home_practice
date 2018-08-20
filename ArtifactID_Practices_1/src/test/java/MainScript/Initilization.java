@@ -2,6 +2,7 @@ package MainScript;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -19,13 +20,14 @@ public class Initilization {
 	public Initilization() {
 
 		try {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
-			driver = new ChromeDriver();
+			//System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
+			//driver = new ChromeDriver();
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 
 		driver.get("http://the-internet.herokuapp.com/");
 

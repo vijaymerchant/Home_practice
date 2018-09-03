@@ -2,6 +2,7 @@ package TestScript;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,7 @@ public class Test_DragandDrop extends Initilization {
 	@Test
 	public void DragandDrop() throws InterruptedException {
 		po.DragandDrop_click();
+		driver.manage().window().maximize();
 		System.out.println("Testing Checkbox");
 		String Str = driver.findElement(By.xpath(".//*[@id='content']/div/h3")).getText();
 		String Str2 = "Drag and Drop";
@@ -25,7 +27,7 @@ public class Test_DragandDrop extends Initilization {
 		String a = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]"))
 				.getText();
 		System.out.println(a);
-		if (driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]")).equals(a)
+		if (driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]")).getText().equals(a)
 				)
 			System.out.println("A is in First place");
 
@@ -33,22 +35,42 @@ public class Test_DragandDrop extends Initilization {
 			System.out.println("B is in First place");
 		// Element which needs to drag.
 		WebElement From = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]"));
+				
 
 		// Element on which need to drop.
 		WebElement To = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]"));
+		System.out.println(driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]")).getText());
 
 		// Using Action class for drag and drop.
 		Actions act = new Actions(driver);
-
 		// Dragged and dropped.
-		act.dragAndDrop(From, To).build().perform();
+			act.dragAndDrop(From, To).build();
+			act.perform();
 
+//		Actions builder = new Actions(driver);
+//		 
+//	      Action dragAndDrop = builder.clickAndHold()
+//
+//		     .moveToElement(To)
+//
+//		    .release()
+//
+//		   .build();
+//
+//		  dragAndDrop.perform();
+		  
+		
+		
+		  Thread.sleep(2000);
 		System.out.println("After Drag and Drop");
 		if (driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]"))
-				.getText() == a)
+				.getText().equals(a))
 
 			System.out.println("Drag and Drop is unsuccessful");
 		else
 			System.out.println("Drag and Drop is successful");
+		
+		System.out.println(driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]"))
+				.getText());
 	}
 }

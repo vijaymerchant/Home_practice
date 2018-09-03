@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5128" started-at="2018-08-20T09:42:40Z" finished-at="2018-08-20T09:42:45Z">
+  <suite name="Default suite" duration-ms="4180" started-at="2018-08-23T11:03:09Z" finished-at="2018-08-23T11:03:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5128" started-at="2018-08-20T09:42:40Z" finished-at="2018-08-20T09:42:45Z">
-      <class name="TestScript.Test_DragandDrop">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="beforeTest" is-config="true" duration-ms="11" started-at="2018-08-20T09:42:40Z" finished-at="2018-08-20T09:42:40Z">
+    <test name="Default test" duration-ms="4180" started-at="2018-08-23T11:03:09Z" finished-at="2018-08-23T11:03:13Z">
+      <class name="TestScript.Test_Dropdown">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="beforeTest" is-config="true" duration-ms="109" started-at="2018-08-23T11:03:09Z" finished-at="2018-08-23T11:03:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-08-20T09:42:40Z" finished-at="2018-08-20T09:42:40Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-08-23T11:03:09Z" finished-at="2018-08-23T11:03:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="beforeMethod" is-config="true" duration-ms="2001" started-at="2018-08-20T09:42:40Z" finished-at="2018-08-20T09:42:42Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="beforeMethod" is-config="true" duration-ms="2001" started-at="2018-08-23T11:03:10Z" finished-at="2018-08-23T11:03:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="DragandDrop()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="DragandDrop" duration-ms="3094" started-at="2018-08-20T09:42:42Z" finished-at="2018-08-20T09:42:45Z">
+        <test-method status="PASS" signature="Dropdown()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="Dropdown" duration-ms="1976" started-at="2018-08-23T11:03:12Z" finished-at="2018-08-23T11:03:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DragandDrop -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-08-20T09:42:45Z" finished-at="2018-08-20T09:42:45Z">
+        </test-method> <!-- Dropdown -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-08-23T11:03:13Z" finished-at="2018-08-23T11:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-08-20T09:42:45Z" finished-at="2018-08-20T09:42:45Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-08-23T11:03:13Z" finished-at="2018-08-23T11:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestScript.Test_DragandDrop@3e0e1046]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-08-20T09:42:45Z" finished-at="2018-08-20T09:42:45Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestScript.Test_Dropdown@3e0e1046]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-08-23T11:03:13Z" finished-at="2018-08-23T11:03:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- TestScript.Test_DragandDrop -->
+      </class> <!-- TestScript.Test_Dropdown -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

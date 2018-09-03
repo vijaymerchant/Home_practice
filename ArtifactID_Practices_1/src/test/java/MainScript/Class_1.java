@@ -5,6 +5,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
+
+import javax.swing.Action;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -15,6 +20,10 @@ public class Class_1 {
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
 	  System.out.println("Hello World");
+	  System.setProperty("webdriver.gecko.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+	 
+	  
   }
   @BeforeMethod
   public void beforeMethod() {

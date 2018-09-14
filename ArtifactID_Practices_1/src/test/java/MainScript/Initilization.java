@@ -1,7 +1,6 @@
 package MainScript;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -10,14 +9,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 public class Initilization {
 
 	public pageObject po;
 	public WebDriver driver;
 
-	public Initilization() {
+	
+	public WebDriver Initilization_1() {
 
 		try {
 			//System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
@@ -30,15 +29,16 @@ public class Initilization {
 		} 
 
 		driver.get("http://the-internet.herokuapp.com/");
+		return driver;
 
-		try {
-
-			po=PageFactory.initElements(driver, pageObject.class);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("In initilization");
+//		try {
+//
+//			po=PageFactory.initElements(driver, pageObject.class);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println("In initilization");
 	}
 
 	@BeforeMethod
@@ -60,6 +60,7 @@ public class Initilization {
 	@AfterClass
 	public void afterClass() {
 		System.out.println("After Class");
+		driver.get("http://the-internet.herokuapp.com/");
 	}
 
 	@BeforeTest

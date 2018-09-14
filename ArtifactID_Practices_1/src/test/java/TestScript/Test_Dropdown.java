@@ -1,3 +1,5 @@
+// working properly
+
 package TestScript;
 
 import org.openqa.selenium.By;
@@ -23,6 +25,7 @@ public class Test_Dropdown extends Initilization {
 		WebElement Drop = driver.findElement(By.id("dropdown"));
 		Select s = new Select(Drop);
 		s.selectByVisibleText("Option 1");
+		
 	}
 
 }

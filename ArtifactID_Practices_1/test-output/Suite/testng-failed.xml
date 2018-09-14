@@ -2,18 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Working Tests"/>
+      </run>
+    </groups>
     <classes>
-      <class name="TestScript.Test_1">
+      <class name="TestScript.Test_BasicAuth">
         <methods>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="f"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
+          <include name="Basic_Auth"/>
         </methods>
-      </class> <!-- TestScript.Test_1 -->
+      </class> <!-- TestScript.Test_BasicAuth -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

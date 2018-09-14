@@ -1,3 +1,5 @@
+// Working properly.
+
 package TestScript;
 
 import org.openqa.selenium.By;
@@ -26,13 +28,15 @@ public class Test_DisappearingElements extends Initilization {
 			System.out.println("All menu items are present on page load");
 			driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/ul[1]/li[2]")).click();
 			driver.navigate().back();
+			driver.navigate().refresh();
+			driver.navigate().refresh();
 			if (driver.findElements(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/ul[1]/li")).size() == 5) {
 				System.out.println("All menu items are present after click");
 			} else
 				System.out.println("Some menu is missing after comming back");
 
 		} else
-			System.out.println("Something items are missing from menu on page load");
+			System.out.println("Some items are missing from menu on page load");
 
 	}
 

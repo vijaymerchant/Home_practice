@@ -1,15 +1,17 @@
+// Test script is running properly.
+
 package TestScript;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import MainScript.Initilization;
-import MainScript.pageObject;
+import MainScript.config;
 
-public class Test_ABTesting extends Initilization {
+public class Test_ABTesting extends config//extends Initilization 
+{
 
-	@Test
+	@Test (groups={"Working Tests"})
 	public void AB_Testing () throws InterruptedException {
 	
 		po.AB_Testing_click();

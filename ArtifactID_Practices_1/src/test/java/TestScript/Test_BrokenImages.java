@@ -1,3 +1,5 @@
+// Test script is running properly.
+
 package TestScript;
 
 import java.io.IOException;

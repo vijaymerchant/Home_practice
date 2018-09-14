@@ -1,3 +1,5 @@
+// Test script is running properly.
+
 package TestScript;
 
 import org.openqa.selenium.By;

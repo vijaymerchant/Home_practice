@@ -1,3 +1,5 @@
+// Not working
+
 package TestScript;
 
 import org.openqa.selenium.By;
@@ -8,7 +10,7 @@ import org.testng.annotations.Test;
 
 import MainScript.Initilization;
 
-public class Test_DragandDrop extends Initilization {
+public class Test_DragandDrop_NotWorking extends Initilization {
 
 	@Test
 	public void DragandDrop() throws InterruptedException {

@@ -3,7 +3,6 @@ package MainScript;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class pageObject {
 
@@ -22,7 +21,7 @@ public class pageObject {
 	WebElement AB_Testing;
 
 	@FindBy(linkText = "Basic Auth")
-	WebElement BasicAuth;
+	public WebElement BasicAuth;
 
 	@FindBy(linkText = "Broken Images")
 	WebElement BrokenImages;

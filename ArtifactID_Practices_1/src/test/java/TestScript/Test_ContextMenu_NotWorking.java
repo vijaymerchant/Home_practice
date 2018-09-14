@@ -1,3 +1,5 @@
+// Not working
+
 package TestScript;
 
 import org.openqa.selenium.By;
@@ -7,7 +9,7 @@ import org.testng.annotations.Test;
 
 import MainScript.Initilization;
 
-public class Test_ContextMenu extends Initilization {
+public class Test_ContextMenu_NotWorking extends Initilization {
 
 	@Test
 	public void ContextMenu() throws InterruptedException{

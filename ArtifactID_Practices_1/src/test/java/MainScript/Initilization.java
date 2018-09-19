@@ -2,7 +2,6 @@ package MainScript;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -15,30 +14,23 @@ public class Initilization {
 	public pageObject po;
 	public WebDriver driver;
 
-	
 	public WebDriver Initilization_1() {
 
 		try {
-			//System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
-			//driver = new ChromeDriver();
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
+			// System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay
+			// Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
+			// driver = new ChromeDriver();
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
 
-		driver.get("http://the-internet.herokuapp.com/");
+			e.printStackTrace();
+		}
+
+	
 		return driver;
 
-//		try {
-//
-//			po=PageFactory.initElements(driver, pageObject.class);
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		System.out.println("In initilization");
 	}
 
 	@BeforeMethod
@@ -46,31 +38,31 @@ public class Initilization {
 
 		Thread.sleep(2000);
 	}
-
-	@AfterMethod
-	public void afterMethod() {
-		//driver.close();
-	}
-
-	@BeforeClass
-	public void beforeClass() {
-		System.out.println("Before Class");
-	}
-
-	@AfterClass
-	public void afterClass() {
-		System.out.println("After Class");
-		driver.get("http://the-internet.herokuapp.com/");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		System.out.println("Before Test");
-	}
-
-	@AfterTest
-	public void afterTest() {
-		System.out.println("After Test");
-	}
+//
+//	@AfterMethod
+//	public void afterMethod() {
+//		// driver.close();
+//	}
+//
+//	@BeforeClass
+//	public void beforeClass() {
+//		System.out.println("Before Class");
+//	}
+//
+//	@AfterClass
+//	public void afterClass() {
+//		System.out.println("After Class");
+//		//driver.get("http://the-internet.herokuapp.com/");
+//	}
+//
+//	@BeforeTest
+//	public void beforeTest() {
+//		System.out.println("Before Test");
+//	}
+//
+//	@AfterTest
+//	public void afterTest() {
+//		System.out.println("After Test");
+//	}
 
 }

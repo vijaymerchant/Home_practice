@@ -3,17 +3,17 @@
 package TestScript;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import MainScript.Initilization;
 import MainScript.config;
 
-public class Test_ABTesting extends config//extends Initilization 
+public class Test_ABTesting extends config
 {
 
-	@Test (groups={"Working Tests"})
-	public void AB_Testing () throws InterruptedException {
-	
+	@Test ( priority =1, groups={"Working Tests"})
+	public WebDriver AB_Testing_1() throws InterruptedException {
+		System.out.println("Executing A/B Testing");
 		po.AB_Testing_click();
 		String heading = "A/B Test Variation 1";
 		String data;
@@ -27,6 +27,8 @@ public class Test_ABTesting extends config//extends Initilization
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		driver.navigate().to("http://the-internet.herokuapp.com/");
+		return driver;
 		
 	}
 

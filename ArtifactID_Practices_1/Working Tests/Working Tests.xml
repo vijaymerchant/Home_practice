@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
-	    		<groups>
-				<run>
-					<include name="Working Tests"></include>
-				</run>
-			</groups>
-		<packages>
-			<package name="TestScript.*" />
-			
-		</packages>
+	<test thread-count="1" name="Test" parallel="false">
+		<!-- <groups> -->
+		<!-- <run> -->
+		<!-- <include name="Working Tests"></include> -->
+		<!-- </run> -->
+		<!-- </groups> -->
+		<!-- <packages> -->
+		<!-- <package name="TestScript.*" /> -->
+
+		<!-- </packages> -->
 
 
-<!-- 		<classes> -->
-<!-- 		<class name="TestScript.Test_BasicAuth" /> -->
-<!-- 		<class name="TestScript.Test_ABTesting" /> -->
-<!-- 		</classes> -->
+		<classes>
+
+			<class name="TestScript.Test_ABTesting" />
+			<class name="TestScript.Test_BasicAuth" />
+		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

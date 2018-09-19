@@ -3,16 +3,35 @@
 package TestScript;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import MainScript.Initilization;
-//@Test
-public class Test_BasicAuth extends Initilization {
+import MainScript.config;
 
-	@Test (groups={"Working Tests"})
-	public void Basic_Auth() throws InterruptedException {
+//@Test
+public class Test_BasicAuth { // extends Test_ABTesting{
+
+	public WebDriver driver;
+
+	Test_BasicAuth(WebDriver drv) throws InterruptedException {
+
+		
+
+		Test_ABTesting AB = new Test_ABTesting();
+
+		driver = AB.AB_Testing_1();
+		
+		drv = this.driver;
+
+	}
+
+	@Test(priority = 2, groups = { "Working Tests" }) // , dependsOnMethods =
+														// "AB_Testing")
+	public void Basic_Auth_1() throws InterruptedException {
 		System.out.println("Executing Basic_Auth test");
-		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth/");
+		// driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth/");
+		driver.navigate().to("http://admin:admin@the-internet.herokuapp.com/basic_auth/");
 		String heading = "Basic Auth";
 		String data;
 

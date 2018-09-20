@@ -5,7 +5,7 @@
     <classes>
       <class name="TestScript.Test_DynamicControls">
         <methods>
-          <include name="Practice"/>
+          <include name="Practice_2"/>
         </methods>
       </class> <!-- TestScript.Test_DynamicControls -->
     </classes>

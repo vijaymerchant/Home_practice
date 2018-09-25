@@ -1,6 +1,7 @@
 package MainScript;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -8,6 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Initilization {
 
@@ -20,9 +23,12 @@ public class Initilization {
 			// System.setProperty("webdriver.chrome.driver","C:\\Users\\win8\\Desktop\\Vijay
 			// Mishra\\Vijay\\Automation\\Drivers\\chromedriver.exe");
 			// driver = new ChromeDriver();
-			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			//System.setProperty("webdriver.gecko.driver","C:\\Users\\win8\\Desktop\\Vijay Mishra\\Vijay\\Automation\\Drivers\\geckodriver.exe");
+			//driver = new FirefoxDriver();
+			
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			
 		} catch (Exception e) {
 
 			e.printStackTrace();

@@ -1,20 +1,15 @@
-// Test script is running properly.
-
 package TestScript;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import MainScript.config;
 
-public class Test_ABTesting extends config {
+public class TestRun extends config {
 
 	@Test // ( priority =0, groups={"Working Tests"})
-	public void AB_Testing_1() // throws InterruptedException
-	{
-		
-		driver.get("http://the-internet.herokuapp.com/");
-		//logdata.tracelog("info","In the exception loop");
+	public WebDriver AB_Testing_1() throws InterruptedException {
 		System.out.println("Executing A/B Testing");
 		po.AB_Testing_click();
 		String heading = "A/B Test Variation 1";
@@ -28,11 +23,10 @@ public class Test_ABTesting extends config {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			logdata.tracelog("error","Error In the exception loop");
+			logdata.tracelog("warning","In the exception loop");
 		}
 		driver.navigate().to("http://the-internet.herokuapp.com/");
-	//	return driver;
+		return driver;
 
 	}
-
 }

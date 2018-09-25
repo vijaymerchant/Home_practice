@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScript.Test_DynamicControls">
+      <class name="TestScript.Test_ABTesting">
         <methods>
-          <include name="Practice_2"/>
+          <include name="AB_Testing_1"/>
         </methods>
-      </class> <!-- TestScript.Test_DynamicControls -->
+      </class> <!-- TestScript.Test_ABTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

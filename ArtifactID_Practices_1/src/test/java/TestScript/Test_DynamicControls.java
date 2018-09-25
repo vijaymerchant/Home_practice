@@ -2,6 +2,7 @@ package TestScript;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -65,7 +66,7 @@ public class Test_DynamicControls { // extends Initilization {
 	 * Screen shot code With Extent report adding screenshot in the report.
 	 * 
 	 */
-	@Test
+	//@Test
 	public void Practice_2() {
 		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
 		test = report.startTest("ExtentDemo with scree shot code");
@@ -85,7 +86,7 @@ public class Test_DynamicControls { // extends Initilization {
 		report.flush();
 	}
 	
-	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30,seconds).pollingEvery(5, SECONDS).ignoring(NoSuchElementException.class);
+	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30,TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 	
 	//test.log(LogStatus.FAIL,test.addScreenCapture(capture(driver))+ "Test Failed");
 	public static String capture(WebDriver driver) throws IOException {
@@ -95,6 +96,18 @@ public class Test_DynamicControls { // extends Initilization {
 	String errflpath = Dest.getAbsolutePath();
 	FileUtils.copyFile(scrFile, Dest);
 	return errflpath;
+	}
+	
+	@Test
+	public void Practice_3(){
+		String [][] argCopy = new String[2][2];
+        int x;
+        //argCopy[0] = ;
+        //x = argCopy[0].length;
+        //for (int y = 0; y < x; y++) 
+        {
+       //     System.out.print(" " + argCopy[0][y]);
+        }
 	}
 
 }

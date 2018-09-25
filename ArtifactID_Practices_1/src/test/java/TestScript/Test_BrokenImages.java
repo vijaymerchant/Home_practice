@@ -12,9 +12,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import MainScript.Initilization;
+import MainScript.config;
 
-public class Test_BrokenImages extends Initilization {
+public class Test_BrokenImages extends config {
 	
 	@Test
 	public void Broken_Images(){

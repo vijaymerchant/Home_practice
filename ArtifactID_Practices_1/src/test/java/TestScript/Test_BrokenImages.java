@@ -16,7 +16,7 @@ import MainScript.config;
 
 public class Test_BrokenImages extends config {
 	
-	@Test
+	@Test(alwaysRun=false)
 	public void Broken_Images(){
 		po.BrokenImages_click();
 		List<WebElement> links = driver.findElements(By.tagName("img"));

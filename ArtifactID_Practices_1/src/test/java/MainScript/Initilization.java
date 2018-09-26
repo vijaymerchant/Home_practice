@@ -3,6 +3,7 @@ package MainScript;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -28,6 +29,13 @@ public class Initilization {
 			
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setCapability("os_version", "11.2");
+			caps.setCapability("device", "iPad Pro");
+			caps.setCapability("real_mobile", "true");
+			caps.setCapability("browserstack.selenium_version", "3.8.0");
+			caps.setCapability("browserstack.debug", true);
+
 			
 		} catch (Exception e) {
 

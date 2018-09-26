@@ -24,7 +24,7 @@ public class Test_BasicAuth extends config{
 //
 //	}
 
-	@Test(priority = 2, groups = { "Working Tests" }) // , dependsOnMethods =
+	@Test( groups = { "Working Tests" }, alwaysRun=false, dependsOnMethods="Test_ABTesting.AB_Testing_1") // , dependsOnMethods =
 														// "AB_Testing")
 	public void Basic_Auth_1() throws InterruptedException {
 		driver.get("http://the-internet.herokuapp.com/");

@@ -2,8 +2,12 @@
 
 package TestScript;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
 
 import MainScript.config;
 
@@ -24,7 +28,7 @@ public class Test_BasicAuth extends config{
 //
 //	}
 
-	@Test( groups = { "Working Tests" }, alwaysRun=false, dependsOnMethods="Test_ABTesting.AB_Testing_1") // , dependsOnMethods =
+	@Test//( groups = { "Working Tests" }, alwaysRun=false, dependsOnMethods="Test_ABTesting.AB_Testing_1") // , dependsOnMethods =
 														// "AB_Testing")
 	public void Basic_Auth_1() throws InterruptedException {
 		driver.get("http://the-internet.herokuapp.com/");
@@ -34,15 +38,28 @@ public class Test_BasicAuth extends config{
 		String heading = "Basic Auth";
 		String data;
 
-		if (driver.getPageSource().contains(heading)) {
-			data = driver.findElement(By.xpath(".//*[@id='content']/div/h3")).getText();
+		try {
+			if (driver.getPageSource().contains(heading)) {
+				data = driver.findElement(By.xpath(".//*[@id='content']/div/h3")).getText();
 
-			if (heading.equalsIgnoreCase(data))
-				System.out.println("Page heading matched. Congrates for successful Login.....");
-			else
-				System.out.println("Page heading does not matched. You are not logged in.....");
-		} else
-			System.out.println("Mentioned name is not present on the page. Please check...");
+				if (heading.equalsIgnoreCase(data))
+					System.out.println("Page heading matched. Congrates for successful Login.....");
+				else
+					System.out.println("Page heading does not matched. You are not logged in.....");
+			} else
+				System.out.println("Mentioned name is not present on the page. Please check...");
+			test.log(LogStatus.PASS, "PASS");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			try {
+				test.log(LogStatus.FAIL, test.addScreenCapture(capture(driver))+e.getMessage());
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		
 
 	}
 

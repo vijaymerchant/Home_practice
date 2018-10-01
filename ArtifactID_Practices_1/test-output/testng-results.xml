@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32634" started-at="2018-09-26T12:42:50Z" finished-at="2018-09-26T12:43:23Z">
+  <suite name="Suite" duration-ms="7835" started-at="2018-10-01T07:09:23Z" finished-at="2018-10-01T07:09:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32634" started-at="2018-09-26T12:42:50Z" finished-at="2018-09-26T12:43:23Z">
-      <class name="testPractice.ParallelTestRun">
-        <test-method status="PASS" signature="executSessionOne()[pri:0, instance:testPractice.ParallelTestRun@5891e32e]" name="executSessionOne" duration-ms="32609" started-at="2018-09-26T12:42:50Z" finished-at="2018-09-26T12:43:23Z">
+    <test name="Test" duration-ms="7835" started-at="2018-10-01T07:09:23Z" finished-at="2018-10-01T07:09:31Z">
+      <class name="TestScript.Test_BasicAuth">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:TestScript.Test_BasicAuth@75881071]" name="BeforeSuite" is-config="true" duration-ms="4768" started-at="2018-10-01T07:09:18Z" finished-at="2018-10-01T07:09:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executSessionOne -->
-      </class> <!-- testPractice.ParallelTestRun -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- BeforeSuite -->
+        <test-method status="PASS" signature="Basic_Auth_1()[pri:0, instance:TestScript.Test_BasicAuth@75881071]" name="Basic_Auth_1" duration-ms="6371" started-at="2018-10-01T07:09:23Z" finished-at="2018-10-01T07:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Basic_Auth_1 -->
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:TestScript.Test_BasicAuth@75881071]" name="AfterSuite" is-config="true" duration-ms="762" started-at="2018-10-01T07:09:31Z" finished-at="2018-10-01T07:09:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- TestScript.Test_BasicAuth -->
+      <class name="TestScript.Test_ABTesting">
+        <test-method status="PASS" signature="AB_Testing_1()[pri:0, instance:TestScript.Test_ABTesting@2a70a3d8]" name="AB_Testing_1" duration-ms="1439" started-at="2018-10-01T07:09:29Z" finished-at="2018-10-01T07:09:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AB_Testing_1 -->
+      </class> <!-- TestScript.Test_ABTesting -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

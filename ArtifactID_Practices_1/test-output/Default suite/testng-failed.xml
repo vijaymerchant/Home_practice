@@ -6,8 +6,6 @@
       <class name="testPractice.ParallelTestRun">
         <methods>
           <include name="executSessionOne"/>
-          <include name="executSessionThree"/>
-          <include name="executeSessionTwo"/>
         </methods>
       </class> <!-- testPractice.ParallelTestRun -->
     </classes>

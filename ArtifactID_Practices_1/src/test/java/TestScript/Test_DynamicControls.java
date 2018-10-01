@@ -66,7 +66,7 @@ public class Test_DynamicControls { // extends Initilization {
 	 * Screen shot code With Extent report adding screenshot in the report.
 	 * 
 	 */
-	//@Test
+	@Test
 	public void Practice_2() {
 		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
 		test = report.startTest("ExtentDemo with scree shot code");
@@ -86,7 +86,7 @@ public class Test_DynamicControls { // extends Initilization {
 		report.flush();
 	}
 	
-	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30,TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+	//Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30,TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 	
 	//test.log(LogStatus.FAIL,test.addScreenCapture(capture(driver))+ "Test Failed");
 	public static String capture(WebDriver driver) throws IOException {
@@ -98,7 +98,7 @@ public class Test_DynamicControls { // extends Initilization {
 	return errflpath;
 	}
 	
-	@Test
+	//@Test
 	public void Practice_3(){
 		String [][] argCopy = new String[2][2];
         int x;
